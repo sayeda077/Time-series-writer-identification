@@ -49,3 +49,81 @@ Since sequences have different lengths:
 - ➕ **Padding** → Short sequences are padded with zeros  
 
 Final fixed input shape: (100, 13)
+
+Additional steps:
+- Labels encoded using **LabelEncoder**
+- Converted into numeric classes (0–52)
+
+---
+
+## 🧠 Model Architecture
+
+### 🔹 LSTM Model
+- LSTM layer (64 units)
+- Dropout
+- LSTM layer (32 units)
+- Dense layers
+- Softmax output (53 classes)
+
+### 🔹 BiLSTM Model
+- Bidirectional LSTM (64 units)
+- Dropout
+- Bidirectional LSTM (32 units)
+- Dense layers
+- Softmax output
+
+---
+
+## ⚙️ Training Details
+
+- **Loss Function:** Sparse Categorical Crossentropy  
+- **Optimizer:** Adam  
+- **Batch Size:** 32  
+- **Epochs:** 10–15  
+- **Metrics:** Accuracy  
+
+---
+
+## 📊 Results
+
+- ✅ **Final Validation Accuracy:** ~88.5% (BiLSTM)
+
+### 📉 Evaluation:
+- Accuracy Score
+- Confusion Matrix
+- Training & Validation Curves
+
+---
+
+## 📈 Confusion Matrix
+
+- Strong diagonal → correct predictions  
+- Few off-diagonal values → low misclassification  
+
+👉 Indicates strong performance in writer identification.
+
+---
+
+## 🧪 Sample Prediction
+
+```python
+sample = X_val_pad[0:1]
+pred = model.predict(sample)
+
+print("Predicted writer ID:", np.argmax(pred))
+print("True writer ID:", y_val_enc[0])
+
+---
+
+## Saving the Model
+model.save("writer_bilstm_model.keras")
+
+---
+
+## How to Run
+1. Install dependencies:
+pip install numpy scikit-learn matplotlib tensorflow seaborn
+2. Open Jupyter Notebook:
+jupyter notebook
+3. Run:
+WriterIdentifyBiLSTM.ipynb
