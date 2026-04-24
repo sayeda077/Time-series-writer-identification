@@ -112,7 +112,7 @@ pred = model.predict(sample)
 
 print("Predicted writer ID:", np.argmax(pred))
 print("True writer ID:", y_val_enc[0])
-
+```
 ---
 
 ## Saving the Model
