@@ -48,4 +48,4 @@ Since sequences have different lengths:
 - ✂️ **Truncation** → Long sequences are cut  
 - ➕ **Padding** → Short sequences are padded with zeros  
 
-Final fixed input shape:
+Final fixed input shape: (100, 13)
