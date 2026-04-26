@@ -1,4 +1,4 @@
-# 🧠 Time-Series Writer Identification using LSTM & BiLSTM
+#  Time-Series Writer Identification using LSTM & BiLSTM
 
 This project focuses on identifying writers based on **time-series handwriting data** using deep learning models such as **LSTM** and **BiLSTM**.
 
@@ -14,7 +14,7 @@ We implemented:
 
 ---
 
-## 📂 Dataset
+##  Dataset
 
 The dataset consists of **online handwriting signals** collected from multiple writers.
 
@@ -41,12 +41,12 @@ The dataset is stored in `.pkl` (pickle) files:
 
 ---
 
-## ⚙️ Preprocessing
+##  Preprocessing
 
 Since sequences have different lengths:
 
-- ✂️ **Truncation** → Long sequences are cut  
-- ➕ **Padding** → Short sequences are padded with zeros  
+-  **Truncation** → Long sequences are cut  
+-  **Padding** → Short sequences are padded with zeros  
 
 Final fixed input shape: (100, 13)
 
@@ -56,7 +56,7 @@ Additional steps:
 
 ---
 
-## 🧠 Model Architecture
+##  Model Architecture
 
 ### 🔹 LSTM Model
 - LSTM layer (64 units)
@@ -74,7 +74,7 @@ Additional steps:
 
 ---
 
-## ⚙️ Training Details
+##  Training Details
 
 - **Loss Function:** Sparse Categorical Crossentropy  
 - **Optimizer:** Adam  
@@ -84,27 +84,27 @@ Additional steps:
 
 ---
 
-## 📊 Results
+##  Results
 
 - ✅ **Final Validation Accuracy:** ~88.5% (BiLSTM)
 
-### 📉 Evaluation:
+###  Evaluation:
 - Accuracy Score
 - Confusion Matrix
 - Training & Validation Curves
 
 ---
 
-## 📈 Confusion Matrix
+##  Confusion Matrix
 
 - Strong diagonal → correct predictions  
 - Few off-diagonal values → low misclassification  
 
-👉 Indicates strong performance in writer identification.
+ Indicates strong performance in writer identification.
 
 ---
 
-## 🧪 Sample Prediction
+##  Sample Prediction
 
 ```python
 sample = X_val_pad[0:1]
