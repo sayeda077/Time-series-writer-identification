@@ -4,13 +4,13 @@ This project focuses on identifying writers based on **time-series handwriting d
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 Handwriting contains unique patterns for each individual. In this project, we use **time-series data (pen movement signals)** to build a model that can classify which writer produced a given sequence.
 
 We implemented:
-- ✅ LSTM (Long Short-Term Memory)
-- ✅ BiLSTM (Bidirectional LSTM)
+- LSTM (Long Short-Term Memory)
+- BiLSTM (Bidirectional LSTM)
 
 ---
 
@@ -86,7 +86,7 @@ Additional steps:
 
 ##  Results
 
-- ✅ **Final Validation Accuracy:** ~88.5% (BiLSTM)
+-  **Final Validation Accuracy:** ~88.5% (BiLSTM)
 
 ###  Evaluation:
 - Accuracy Score
